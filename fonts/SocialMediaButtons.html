@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<link href="https://cdn.bootcss.com/font-awesome/5.8.0/css/all.css" rel="stylesheet" />
+		<style>
+			body {
+				background: url(../images/social2.gif) no-repeat center;
+				padding: 0;
+				margin: 0;
+				margin-top:600px;
+				background-size: 80%;
+			}
+			.middle {
+				position: absolute;
+				top: 80%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			
+			.btn {
+				display: inline-block;
+				width: 90px;
+				height: 90px;
+				background: #f1f1f1;
+				margin: 10px;
+				border-radius: 30%;
+				box-shadow: 0 5px 15px -5px #00000070;
+				color: #3498db;
+				overflow: hidden;
+				position: relative;
+				text-align: center;
+			}
+			.btn img {
+				margin-top: 10px;
+				width: 80%;
+				transition: 2s linear;
+			}
+			.btn:hover img {
+				position: relative;
+				animation: zoom 2s ease-in-out;
+				color: #f1f1f1;
+			}
+			@keyframes zoom{
+				50%{
+					transform: scale(2);
+				}
+			}
+			.btn::before {
+				content: '';
+				position: absolute;
+				width: 120%;
+				height: 120%;
+				background: #ffa600;
+				transform: rotate(45deg);
+				left: -110%;
+				top: 90%;
+			}
+			.btn:hover::before {
+				animation: flash 0.7s 1;
+				top: -10%;
+				left: -10%;
+			}
+			@keyframes flash {
+				0% {
+					left: -100%;
+					top: 90%;
+				}
+				50% {
+					left: 10%;
+					top: -30%;
+				}
+				100% {
+					left: -10%;
+					top: -10%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="middle">
+			<a class="btn" href="https://github.com/yyeexin">
+				<img src="../images/ig.gif">
+			</a>
+			<a class="btn" href="https://weibo.com/u/3481962337">
+				<img src="../images/whatsapp.gif">
+			</a>
+			<a class="btn" href="https://public-1256942570.cos.ap-chengdu.myqcloud.com/qrcode.jpg">
+				<img src="../images/github.gif">
+			</a>
+			<a class="btn" href="https://public-1256942570.cos.ap-chengdu.myqcloud.com/qq_qccode.jpg">
+				<img src="../images/twitter.gif">
+			</a>
+
+			<a class="btn" href="https://space.bilibili.com/11866444">
+				<img src="../images/linkedin.gif">
+			</a>
+		</div>
+	</body>
+</html>
